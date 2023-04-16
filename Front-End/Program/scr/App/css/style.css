@@ -1,0 +1,273 @@
+@import 'CommonStyle.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: rgb(2, 196, 246);
+    background: linear-gradient(145deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%);
+}
+
+/* ==================== Forum Background ======================== */
+
+.Forum {
+    width: 550px;
+    height: 900px;
+    margin-top: 25px;
+    background-color: #2b3237;
+    box-shadow: rgba(0, 0, 0, 0.50) 6px 6px 12px;
+}
+
+
+/* ==================== Personal info css ======================== */
+
+.PersonalInfo-Container {
+    width: 100%;
+    height: 200px;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.PersonalInfo-Container span {
+    font-size: 48px;
+    color: white;
+}
+
+.PersonalInfo-Container .NameTextbox {
+    font-size: 28px;
+    text-align: center;
+    border-radius: 25px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+}
+
+/* ==================== Personal Skills css ======================== */
+
+.PersonalSkills-Container {
+    width: 100%;
+    height: 380px;
+}
+
+.SkillList-container {
+    margin-left: 50px;
+    margin-top: 25px;
+    color: white;
+    width: 250px;
+    height: auto;
+    max-height: 320px;
+    overflow: auto;
+    text-align: center;
+    background-color: #48545d;
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+    float: left;
+}
+
+.SKL-Title {
+    font-size: 32px;
+    text-decoration: underline;
+
+}
+
+.SkillList {
+    list-style: none;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.SkillList li {
+    cursor: pointer;
+}
+
+
+/* ===== Personal Skills Dropdown css =====*/
+
+.dropdown {
+    position: inherit;
+    float: left;
+    margin-left: 15px;
+    margin-top: 25px;
+
+}
+
+.dropbtn {
+    background-color: #48545d;
+    color: white;
+    font-size: 24px;
+    width: 175px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+}
+
+.dropbtn:hover {
+    background-color: #8399a9;
+}
+
+#SKillsInput {
+    box-sizing: border-box;
+    background-image: url('../img/searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#SKillsInput:focus {
+    outline: 3px solid #ddd;
+}
+
+#AddSKill-Textbox {
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 14px 20px 12px 0px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#AddSKill-Textbox:focus {
+    outline: 3px solid #ddd;
+}
+
+.AddSkillBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 1px;
+    background-color: #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SkillsDropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+
+.SkillsDropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown span:hover,
+.AddSkillBtn:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+
+.SKL-Info {
+    position: absolute;
+    color: white;
+
+    width: auto;
+    height: 25px;
+    margin-top: 75px;
+}
+
+
+/* ==================== Social Media css ======================== */
+
+.SocialMedia-Container {
+    width: 100%;
+    height: 210px;
+    display: grid;
+    grid-template-columns: 137.5px 137.5px 137.5px 137.5px;
+    grid-template-rows: 105px 105px;
+}
+
+
+.bx {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.SocialMedia-Container span{
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+.Media-Container{
+    margin: auto;
+    text-align: center;
+    
+}
+
+.Connected {
+    color: limegreen;
+}
+
+.disconnect-Text{
+    visibility: hidden;
+}
+
+
+
+
+.Submit-Btn{
+    margin-top: 10px;
+    width: 350px;
+    height: 75px;
+    border-radius: 50px;
+    font-size: 36px;
+    background: rgb(2, 196, 246);
+    /* background: linear-gradient(90deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%); */
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+    transition: all .1s ease-in;
+}
+
+.Submit-Btn:hover{
+    transition: all .1s ease-in;
+    background: limegreen;
+    /* background: linear-gradient(90deg, rgb(2, 246, 22) 40%, rgb(13, 150, 1) 100%); */
+    
+}
+
+.Submit-Btn:active{
+    transform: translateY(4px);
+    background: rgb(44, 182, 44);
+}
+
+/* @keyframes SubmitBtnActiveAnimation{
+    0% {
+        background: rgb(2, 196, 246);
+        background: linear-gradient(90deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%);
+    }
+    50% {
+        background: rgb(2, 196, 246);
+        background: linear-gradient(90deg, rgba(1, 120, 150) 40%, rgb(2, 246, 22) 100%);
+    }
+    100%{
+        background: rgb(2, 246, 22);
+        background: linear-gradient(90deg, rgb(2, 246, 22) 40%, rgb(13, 150, 1) 100%);
+    }
+} */

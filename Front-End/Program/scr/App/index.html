@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- outside Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Other -->
+    <title>Inimco case</title>
+</head>
+
+<body>
+    <div class="Application">
+        <div class="Forum Hcenter">
+
+            <div class="PersonalInfo-Container">
+                <span>First Name</span>
+                <input type="text" placeholder="First name" class="NameTextbox Hcenter" id="FirstNameTextbox" value="Test">
+                <span>Last Name</span>
+                <input type="text" placeholder="Last name" class="NameTextbox Hcenter" id="LastNameTextbox" value="Test">
+            </div>
+
+            <div class="PersonalSkills-Container">
+
+                <div class="SkillList-container">
+                    <span class="SKL-Title">Skills</span>
+                    <ul class="SkillList" id="SkillList">
+                        <li>Test</li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button onclick="ToggleDropdown()" class="dropbtn">Personality</button>
+                    <div id="SkillsDropdown" class="SkillsDropdown-content">
+                      <input type="text" placeholder="Search.." id="SKillsInput" onkeyup="filterFunction()">
+                      <span onclick="AddSkillToList(this)">Team Player</span>
+                      <span onclick="AddSkillToList(this)">Social</span>
+                      <span onclick="AddSkillToList(this)">Honest</span>
+                      <span onclick="AddSkillToList(this)">Flexible</span>
+                      <span onclick="AddSkillToList(this)">Motivated</span>
+                      <span onclick="AddSkillToList(this)">Caring</span>
+                      <span onclick="AddSkillToList(this)">Courtesy</span>
+                      <span onclick="AddSkillToList(this)">Understanding</span>
+                      <span onclick="AddSkillToList(this)">Passionate</span>
+                      <span onclick="AddSkillToList(this)">Enthusiastic</span>
+                      <span onclick="AddSkillToList(this)">Resourcefull</span>
+                      <span onclick="AddSkillToList(this)">Forgiving</span>
+                      <span onclick="AddSkillToList(this)">Introvert</span>
+                      <span onclick="AddSkillToList(this)">Extrovert</span>
+                      <input type="text" placeholder="Add you own" id="AddSKill-Textbox"> <button id="AddSkillBtn" class="AddSkillBtn">ADD</button>
+                    </div>
+                </div>
+
+                <!-- <span class="SKL-Info">(Click on a skill to remove it from the list)</span> -->
+
+            </div>
+
+            <div class="SocialMedia-Container">
+                <div class="Media-Container Facebook-Container" >
+                    <i class='bx bxl-facebook' id="Add-facebook-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="facebook-Text" id="facebook-Username">Facebook</span> <br>
+                    <span class="disconnect-Text" id="facebook-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container Instagram-Container">
+                    <i class='bx bxl-instagram' id="Add-instagram-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="instagram-Text" id="instagram-Username">Instagram</span><br>
+                    <span class="disconnect-Text" id="instagram-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container linkedin-Container">
+                    <i class='bx bxl-linkedin' id="Add-linkedin-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="linkedin-Text" id="linkedin-Username">LinkedIn</span><br>
+                    <span class="disconnect-Text" id="linkedin-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container Twitter-Container">
+                    <i class='bx bxl-twitter' id="Add-twitter-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="twitter-Text" id="twitter-Username">Twitter</span><br>
+                    <span class="disconnect-Text" id="twitter-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container Extra-Container">
+                    <i class='bx bx-plus-circle' id="Add-extra1-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="extra1-Text" id="extra1-Username">Extra</span><br>
+                    <span class="disconnect-Text" id="extra1-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container Extra-Container">
+                    <i class='bx bx-plus-circle' id="Add-extra2-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="extra2-Text" id="extra2-Username">Extra</span><br>
+                    <span class="disconnect-Text" id="extra2-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container Extra-Container">
+                    <i class='bx bx-plus-circle' id="Add-extra3-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="extra3-Text" id="extra3-Username">Extra</span><br>
+                    <span class="disconnect-Text" id="extra3-disconnect-Text">(Click to disconnect)</span>
+                </div>
+                <div class="Media-Container Extra-Container">
+                    <i class='bx bx-plus-circle' id="Add-extra4-Btn" onclick="AddSocial(this)"></i><br>
+                    <span class="extra4-Text" id="extra4-Username">Extra</span><br>
+                    <span class="disconnect-Text" id="extra4-disconnect-Text">(Click to disconnect)</span>
+                </div>
+            </div>
+
+            <Button class="Submit-Btn Hcenter" id="Submit-Btn">Submit</Button>
+
+        </div>
+    </div>
+</body>
+<script src="./scripts/jquery.js"></script>
+<script src="./scripts/Dropdown.js"></script>
+<script src="./scripts/SocialMedia.js"></script>
+<script src="./scripts/ReadAndSend.js"></script>
+
+</html>
